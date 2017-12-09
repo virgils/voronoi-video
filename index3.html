@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Voronoi Video | Demo 3</title>
+		<meta name="description" content="HTML5 video fragmented by Voronoi" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Virgil Spruit" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script>document.documentElement.className = 'js';</script>
+		<script src="js/vendor/rhill-voronoi-core.min.js"></script>
+		<script src="js/vendor/QuadTree.js"></script>
+		<script src="js/vendor/VoronoiDemo.js"></script>
+	</head>
+	<body class="demo-3 loading">
+		<main>
+			<header class="demo-header">
+				<h1 class="demo-header__title">HTML5 Voronoi Fragments</h1>
+				<nav class="demos">
+					<a class="demo" href="index.html">Demo 1</a>
+					<a class="demo" href="index2.html">Demo 2</a>
+					<a class="demo demo--current" href="index3.html">Demo 3</a>
+				</nav>
+			</header>
+			<div class="content">
+				<span class="msg-widescreen">Please view on desktop with a wider screen.</span>
+				<div id="canvas-container">
+					<div id="canvasParent">
+						<canvas id="voronoiCanvas" width="960" height="540"></canvas>
+					</div>
+
+					<!-- This container will be filled with voronoi cells -->
+					<div id="container-cells" class="tilt">
+					</div>
+
+				    <video id="video" class="tilt" width="960" height="540" autoplay loop>
+				        <source type="video/mp4" src="video/subway.mp4" />
+				    </video>		
+				</div>
+				<p>Click on the video or hit the spacebar</p>
+			</div>
+		</main>
+
+    <script src="js/vendor/TweenMax.min.js"></script>
+	<script src="js/demo3.js"></script>
+
+	</body>
+</html>
