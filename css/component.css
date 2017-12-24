@@ -54,13 +54,13 @@ h1 {margin:0 0 0.5em 0;padding: 4px 5em 4px 4px;font:bold large sans-serif;}
     padding-top: 56.25%;
     max-width: 100%;
     left: 50%;
-    overflow: hidden;
     display: block;
 }
 
 @media (hover: none) {
 	#canvas-container {
 		visibility: hidden;
+		overflow: hidden;
 	}
 }
 
@@ -94,42 +94,6 @@ h1 {margin:0 0 0.5em 0;padding: 4px 5em 4px 4px;font:bold large sans-serif;}
     left: 10%;
     position: absolute;
     width: 80%;
-}
-
-.buttons {
-	position: fixed;
-	right: 20px;
-	top: 20px;
-	text-align: center;
-	-webkit-transform: translateZ(5000px);
-	z-index: 1000;
-}
-
-button {
-	position: relative;
-	z-index: 100;
-	font-size: 12px;
-	padding:5px 10px;
-	z-index: 1000;
-	border:0;
-	opacity:0.8;
-	text-transform: uppercase;
-}
-
-button.explode {
-	display: none;
-}
-
-button.reset {
-	background-image: url('../assets/close-black.png');
-	background-color: transparent;
-	width: 40px;
-	height: 40px;
-	text-indent: -1000em;
-	display: none;
-	cursor: pointer;
-	outline:none;
-	opacity:1;
 }
 
 button.reset:hover {
@@ -251,3 +215,15 @@ video.small {
 
 /* demo 3 */
 
+
+.content {
+	padding: 3em 0;
+	text-align: center;
+}
+
+.content p {
+	position: absolute;
+    bottom: 0.8em;
+    display: block;
+    width: 100%;
+}
