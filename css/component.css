@@ -7,10 +7,6 @@ body {
 body {
 	font-family:tahoma,verdana,arial;font-size:13px;margin:0;padding:0;
 	background: white;
-/*	background-image: url(../assets/fullmoonpost.jpg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;*/
 	height: 100%;
 }
 
@@ -18,16 +14,22 @@ main {
 	height: 100%;
 }
 
-h1 {margin:0 0 0.5em 0;padding: 4px 5em 4px 4px;font:bold large sans-serif;background-color:#c9d7f1;}
-h4 {font-size:14px;margin:0.5em 0 0 0;border:0;border-bottom:solid 1px #c9d7f1;padding:2px;background-color:#e5ecf9;}
+h1 {margin:0 0 0.5em 0;padding: 4px 5em 4px 4px;font:bold large sans-serif;}
 
-/* warning message for small screen */
-.msg-widescreen {
-	display: block;
+/* warning message for touch screen to desktop */
+.msg-desktop {
+	display: none;
     text-align: center;
     top: 50%;
     position: fixed;
     width: 100%;
+    z-index: 3;
+}
+
+@media (hover: none) {
+	.msg-desktop {
+		display: block;
+	}
 }
 
 /* fade in content after loading */
@@ -44,37 +46,54 @@ h4 {font-size:14px;margin:0.5em 0 0 0;border:0;border-bottom:solid 1px #c9d7f1;p
 /* canvas container */
 
 #canvas-container {
-	visibility: hidden;
-    position: absolute;
+	position: absolute;
     z-index: 1;
     top: 50%;
     transform: translateY(-50%) translateX(-50%);
+    width: 100%;
+    padding-top: 56.25%;
+    max-width: 100%;
     left: 50%;
+    overflow: hidden;
+    display: block;
+}
+
+@media (hover: none) {
+	#canvas-container {
+		visibility: hidden;
+	}
 }
 
 @media only screen and (min-width: 960px) {
-	.msg-widescreen { display: none; }
-	#canvas-container { visibility: visible; }
+	#canvas-container {
+	    padding-top: 0;
+	    width: 960px;
+	    height: 540px;
+	}
 }
 
 #canvasParent {
 	visibility: hidden;
 	position: absolute;
-	top: -540px;
+	/* hide off screen. needed for calculations */
+ 	top: -100vh;
+    left: -100vw;
 }
 
 #container-cells {
-	width: 960px;
-	height: 540px;
-	position: relative;
-	z-index: 0;
-	margin:0 auto;
+	width: 100%;
+    position: absolute;
+    z-index: 0;
+    margin: 0 auto;
+    top: 0;
+    height: 100%;
 }
 	
 #container-cells canvas {
-	top: 0;
-	left: 0;
-	position: absolute;
+    top: 10%;
+    left: 10%;
+    position: absolute;
+    width: 80%;
 }
 
 .buttons {
@@ -169,7 +188,7 @@ video.small {
     height: 100%;
     overflow: hidden;
     background-position: center;
-    display: none;
+    /*display: none;*/
 }
 
 @media only screen and (min-width: 960px) {
