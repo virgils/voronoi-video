@@ -215,11 +215,7 @@ function randomInt(min,max) {
 // Remove preload layer and show demo
 function removePreloader() {
   document.body.classList.remove('loading');
-
-  // Hide video to be replaced by canvas
-  // Safari performance fix
-  v.style.display = 'none';
-
+  
   // Show cells
   document.getElementById("container-cells").classList.add('show');
 }

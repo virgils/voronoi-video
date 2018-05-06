@@ -135,12 +135,8 @@ video.small {
 }
 
 .demo-1 video {
-	filter: invert(100%);
-	opacity:0.5;
-}
-
-.demo-1 video {
-	display: none;
+	opacity: 0;
+	pointer-events: none;
 }
 
 .video-wrapper {
@@ -197,6 +193,11 @@ video.small {
 
 
 /* demo 2 */
+
+.demo-2 video {
+	opacity: 0;
+	pointer-events: none;
+}
 
 .demo-2 #container-cells {
 	z-index: 1;
