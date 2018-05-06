@@ -216,6 +216,11 @@ video.small {
 
 /* demo 3 */
 
+.demo-3 video {
+	margin-left: calc(-480px + 10%);
+	width: 80%;
+	pointer-events: none;
+}
 
 .content {
 	padding: 3em 0;

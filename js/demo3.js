@@ -243,7 +243,7 @@ function handleMouseMove(e) {
 function openVoronoi() {
   exploded = true;
 
-  v.style.display = 'none';
+  v.style.opacity = 0;
 
   for (i = 0; i < canvasCells.length; ++i) {
     TweenMax.to(canvasCells[i], 0.3, {
@@ -271,7 +271,7 @@ function closeVoronoi() {
     y: 0,
     z: 0,
     onComplete: function() {
-      v.style.display = 'block';
+      v.style.opacity = 1;
     }
   });
 }
