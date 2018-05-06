@@ -2,4 +2,6 @@
 
 This is an experiment where HTML5 video is split apart into different animating voronoi cells. Show cased in three seperate demos.
 
-Demo: http://www.klash.nl/labs/voronoi-video/
+Published on CSS Tricks: https://css-tricks.com/fragmented-html5-video/
+
+Demo link: http://www.klash.nl/labs/voronoi-video/
